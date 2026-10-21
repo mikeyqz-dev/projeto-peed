@@ -3,6 +3,6 @@
 
 #include "corretor.h"
 
-void carregarDicionario (Palavra dicionario[]);
+int carregarDicionario (Palavra dicionario[]);
 
 #endif

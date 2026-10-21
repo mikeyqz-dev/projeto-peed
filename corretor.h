@@ -1,18 +1,19 @@
 #ifndef CORRETOR_H
 #define CORRETOR_H
 
-#include <stdio.h>
-#include <string.h>
-
+#define TAM_PALAVRA 50
+#define TAM_SIGNIFICADO 200
+#define MAX_PALAVRAS 100
+#define TOP_RESULTADOS 5
 
 typedef struct {
-    char palavra[50];
-    char significado[200];
+    char palavra[TAM_PALAVRA];
+    char significado[TAM_SIGNIFICADO];
 } Palavra;
 
 typedef struct {
-    char palavra[50];
-    char significado[200];
+    char palavra[TAM_PALAVRA];
+    char significado[TAM_SIGNIFICADO];
     int distancia;
 } Resultado;
 
@@ -32,5 +33,9 @@ void exibirResultados(
     Resultado resultados[],
     int quantidade
 );
+
+void converterMinusculas(char *palavra);
+
+int entradaValida(char *palavra);
 
 #endif

@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 #include "dicionario.h"
-#include "corretor.h"
 
-void carregarDicionario(Palavra dicionario[]){
+int carregarDicionario(Palavra dicionario[]){
 
-static Palavra dicionario[] = {
+static Palavra base[] = {
     {"programacao",   "Atividade de escrever instrucoes para que o computador execute tarefas."},
     {"programador",   "Pessoa que desenvolve programas de computador."},
     {"programa",      "Conjunto de instrucoes executadas por um computador."},
@@ -71,4 +70,13 @@ static Palavra dicionario[] = {
     {"pesquisa",      "Investigacao feita para encontrar informacoes sobre um assunto."},
     {"usuario",       "Pessoa que utiliza um sistema ou programa."}
 };
+
+int quantidade = sizeof(base) / sizeof(base[0]);
+
+for (int i = 0; i < quantidade; i++){
+    dicionario[i] = base[i];
+}
+
+return quantidade;
+
 }
